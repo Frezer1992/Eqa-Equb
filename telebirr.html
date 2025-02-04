@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telebirr Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Telebirr Payment</h1>
+    <div class="container">
+        <h3>Scan the QR Code & Pay</h3>
+        <img src="https://i.postimg.cc/Vvyz3MQ5/IMG-0546.jpg" alt="Telebirr QR Code" class="qr-code">
+        
+        <p><b>Instructions:</b></p>
+        <ul style="text-align: left; display: inline-block;">
+            <li>1️⃣ Open the <b>Telebirr App</b></li>
+            <li>2️⃣ Click on <b>Scan QR Code</b></li>
+            <li>3️⃣ Enter the Amount and Pay</li>
+            <li>4️⃣ Take a Screenshot of the Payment</li>
+            <li>5️⃣ Submit the Payment Proof Below</li>
+        </ul>
+
+        <form action="submit_payment.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="transaction_id" placeholder="Enter Transaction ID" required>
+            <input type="file" name="payment_screenshot" accept="image/*" required>
+            <button type="submit">Submit Proof</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የስልክ እቁብ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .heading {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .amount-box {
+            margin: 20px 0;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        .result {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .back-arrow {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 2em;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+        .back-arrow:hover {
+            background-color: #2980b9;
+        }
+        .specifications {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        td {
+            background-color: #ecf0f1;
+        }
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading">የስልክ እቁብ</h1>
+    <div class="container">
+        <h3>ይጀምሩ</h3>
+
+        <div class="amount-box">
+            <label for="amount">ስንት ብር ለማስገባት ይፈልጋሉ:</label>
+            <input type="number" id="amount" placeholder="ሚፈልጉትን ብር ያስገቡ" oninput="calculateDays()">
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="specifications">
+            <table>
+                <tr><th>ስም</th><td>ሳምሱንግ S8</td></tr>
+                <tr><th>ዋጋ</th><td>15,000 ብር</td></tr>
+                <tr><th>ተመን</th><td>15 ብር/ቀን</td></tr>
+            </table>
+        </div>
+
+        <button class="submit-button" onclick="submitForm()">ጀምር</button>
+    </div>
+
+    <a href="nextpage.html" class="back-arrow">&#8592;</a>
+
+    <script>
+        function calculateDays() {
+            const amount = document.getElementById("amount").value;
+            const pricePerDay = 15; // 15 Birr per day for the phone
+
+            // Total number of days the user needs to pay for (3 years * 365 days)
+            const totalDays = 3 * 365;
+
+            if (amount) {
+                const paidDays = Math.floor(amount / pricePerDay); // Calculate how many days the user has already paid for
+                const remainingDays = totalDays - paidDays; // Calculate how many more days the user needs to pay
+
+                // Update the result with the number of days the user still needs to pay
+                document.getElementById("result").innerHTML = `
+                    <span style="color: green;">ይህ መጠን ለ <strong>${paidDays} ቀን</strong> ያገለግላል</span><br>
+                    <span style="color: red;">የቀረው ቀን: <strong>${remainingDays} ቀን</strong> ያህል ነው</span>
+                `;
+            } else {
+                document.getElementById("result").innerHTML = "";
+            }
+        }
+
+        function submitForm() {
+            // Redirect to telebirr.html
+            window.location.href = "telebirr.html";
+        }
+    </script>
+
+</body>
+</html>

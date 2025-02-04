@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>የቲቪ እቁብ</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; }
+.container { width: 80%; max-width: 500px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background: #3498db; color: white; }
+.submit-button { background: #3498db; color: white; padding: 10px; width: 100%; border: none; margin-top: 20px; }
+.back-button { margin-top: 20px; display: block; color: #3498db; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header><h1>የቲቪ እቁብ</h1></header>
+
+<div class="container">
+<h2>በመረጡት ይመዝገቡ</h2>
+<label for="amount">ያስገቡ ብር:</label>
+<input type="number" id="amount" placeholder="ያስገቡ ብር" required oninput="calculateDays()">
+<p id="result"></p>
+<p id="remainingDays"></p>
+
+<h3>የቲቪ ዝርዝር</h3>
+<table>
+<tr><th>ዝርዝር</th><th>መረጃ</th></tr>
+<tr><td>አይነት</td><td>55” 4K Smart TV</td></tr>
+<tr><td>ቅርፅ</td><td>Ultra HD 4K</td></tr>
+<tr><td>Connectivity</td><td>HDMI, USB, Wi-Fi</td></tr>
+<tr><td>የስልክ አስተዳደር</td><td>Android TV</td></tr>
+</table>
+
+<button class="submit-button">Submit</button>
+<a href="index.html" class="back-button">← ተመለስ</a>
+</div>
+
+<script>
+function calculateDays() {
+let amount = document.getElementById("amount").value;
+let daysPaidFor = Math.floor(amount / 50);
+let totalDays = 3 * 365;
+let remainingDays = totalDays - daysPaidFor;
+
+document.getElementById("result").innerText = `ይህ መጠን ${daysPaidFor} ቀናት ይቆያል።`;
+document.getElementById("remainingDays").innerText = `የቀረው ቀን: ${remainingDays} ቀናት።`;
+}
+</script>
+
+</body>
+</html>

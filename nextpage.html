@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mat Equb (የእቃ እቁብ)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth; /* Smooth scrolling */
+            text-align: center;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2em;
+            margin: 0;
+            white-space: nowrap; /* Prevents wrapping */
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 1.5em;
+        }
+        .item-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+        .item img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .item-description {
+            max-width: 60%;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .apply-button {
+            display: block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .apply-button:hover {
+            background-color: #2980b9;
+        }
+        .back-arrow {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 2em;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+        .back-arrow:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mat Equb (የእቃ እቁብ)</h1>
+    </header>
+
+    <div class="content">
+        <h2>በመረጡት ይመዝገቡ</h2>
+    </div>
+
+    <div class="item-container">
+        <!-- Item 1: Phone -->
+        <div class="item">
+            <img src="https://i.postimg.cc/nVNG1bzj/IMG-0539.jpg" alt="Phone">
+            <div class="item-description">
+                <p>በቀን 15 ብር</p>
+                <p>የ3 አመት ግዜ</p>
+                <p>ለ 1000 ሰው</p>
+                <p>የ 15ሺህ ብር ስልክ</p>
+                <p>በ3 ወር ለ90 ሰው የሚወጣ</p>
+                <a href="phonepage.html" class="apply-button">ተመዝገቡ</a>
+            </div>
+        </div>
+
+        <!-- Item 2: TV -->
+        <div class="item">
+            <img src="https://i.postimg.cc/d1yLsXKp/IMG-0540.jpg" alt="TV">
+            <div class="item-description">
+                <p>በቀን 50 ብር</p>
+                <p>የ3 አመት ግዜ</p>
+                <p>ለ1000 ሰው</p>
+                <p>የ 50ሺህ ብር ቲቪ</p>
+                <p>በ3 ወር ለ90 ሰው የሚወጣ</p>
+                <a href="tvpage.html" class="apply-button">ተመዝገቡ</a>
+            </div>
+        </div>
+
+        <!-- Item 3: Fridge -->
+        <div class="item">
+            <img src="https://i.postimg.cc/J4mG8PYY/IMG-0541.jpg" alt="Fridge">
+            <div class="item-description">
+                <p>በቀን 40 ብር</p>
+                <p>የ2 አመት ግዜ</p>
+                <p>ለ500 ሰው</p>
+                <p>የ 30ሺህ ብር ፍሪጅ</p>
+                <p>በ4 ወር ለ70 ሰው የሚወጣ</p>
+                <a href="fridgepage.html" class="apply-button">ተመዝገቡ</a>
+            </div>
+        </div>
+
+        <!-- Item 4: Sofa -->
+        <div class="item">
+            <img src="https://i.postimg.cc/VvP5dRf6/IMG-0542.jpg" alt="Sofa">
+            <div class="item-description">
+                <p>በቀን 20 ብር</p>
+                <p>የ3 አመት ግዜ</p>
+                <p>ለ700 ሰው</p>
+                <p>የ 25ሺህ ብር ሶፋ</p>
+                <p>በ5 ወር ለ60 ሰው የሚወጣ</p>
+                <a href="sofapage.html" class="apply-button">ተመዝገቡ</a>
+            </div>
+        </div>
+
+        <!-- Item 5: Washing Machine -->
+        <div class="item">
+            <img src="https://i.postimg.cc/7h1h72hN/IMG-0543.jpg" alt="Washing Machine">
+            <div class="item-description">
+                <p>በቀን 35 ብር</p>
+                <p>የ4 አመት ግዜ</p>
+                <p>ለ600 ሰው</p>
+                <p>የ 40ሺህ ብር ማጠቢያ ማሽን</p>
+                <p>በ6 ወር ለ50 ሰው የሚወጣ</p>
+                <a href="washingmachinepage.html" class="apply-button">ተመዝገቡ</a>
+            </div>
+        </div>
+
+        <!-- Item 6: Bicycle -->
+        <div class="item">
+            <img src="https://i.postimg.cc/wxD7nS2s/IMG-0544.png" alt="Bicycle">
+            <div class="item-description">
+                <p>በቀን 25 ብር</p>
+                <p>የ2 አመት ግዜ</p>
+                <p>ለ900 ሰው</p>
+                <p>የ 15ሺህ ብር ብስክሌት</p>
+                <p>በ3 ወር ለ80 ሰው የሚወጣ</p>
+                <a href="bicyclepage.html" class="apply-button">ተመዝገቡ</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
